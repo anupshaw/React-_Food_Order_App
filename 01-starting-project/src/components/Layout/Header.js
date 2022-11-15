@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
 import mealsImage from "../../assets/meals.jpg";
+import PopUp from "../Meals/MealsSummary";
 
 const Header = () => {
   return (
@@ -13,6 +14,7 @@ const Header = () => {
       <div className={classes.img}>
       <img src={mealsImage} alt="header food"/>
       </div>
+      <PopUp />
     </Fragment>
   );
 };
