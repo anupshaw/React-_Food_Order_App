@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: brown;
+    justify-content: space-around;
+    align-items: center;
+    /* background-image: url("src/components/photo/meals.jpg"); */
+}
+
+.header h1{
+    color: white;
+}
+
+.img img{
+    width: 100%;
+    height: 200px;
+}
