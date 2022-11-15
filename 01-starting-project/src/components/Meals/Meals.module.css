@@ -1,0 +1,10 @@
+.meals
+{
+    width: 850px;
+    padding: 10px 30px;
+    background-color: white;
+    margin: 10px auto ;
+    position: relative;
+    bottom: 62px;
+    border-radius: 20px; 
+}
