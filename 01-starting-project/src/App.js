@@ -4,10 +4,30 @@ import Meals from "./components/Meals/Meals";
 import MealsSummary from "./components/Meals/MealsSummary";
 
 const dummyMeals = [
-  { name: "Sushi", description: "Finest fish and veggies", price: "$22.99" },
-  { name: "Schnitzel", description: "A german speciality!", price: "$16.50" },
-  { name: "Berbecue Burger", description: "American,raw,meaty", price: "$12.99" },
-  { name: "Green Bowl", description: "Healthy...and green...", price: "$10.75" }
+  {
+    id: "e1",
+    name: "Sushi",
+    description: "Finest fish and veggies",
+    price: "$22.99",
+  },
+  {
+    id: "e2",
+    name: "Schnitzel",
+    description: "A german speciality!",
+    price: "$16.50",
+  },
+  {
+    id: "e3",
+    name: "Berbecue Burger",
+    description: "American,raw,meaty",
+    price: "$12.99",
+  },
+  {
+    id: "e4",
+    name: "Green Bowl",
+    description: "Healthy...and green...",
+    price: "$10.75",
+  },
 ];
 
 function App() {

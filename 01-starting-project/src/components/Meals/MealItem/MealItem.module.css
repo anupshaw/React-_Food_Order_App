@@ -1,16 +1,19 @@
-.availableMeals{
+.mealItem{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+border-bottom: 1px solid black;
+}
+
+.meals{
     width: 800px;
     padding: 0px 30px;
-    /* background-color: white; */
     position: relative;
-    /* bottom: 62px; */
     margin: 5px auto;
-    /* border-radius: 20px;  */
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     color: black;
-    border-bottom: 1px solid black;
+   
   }
 
   .mealsName{

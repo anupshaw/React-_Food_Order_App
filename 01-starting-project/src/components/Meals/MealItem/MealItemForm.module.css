@@ -1,0 +1,45 @@
+.form
+{
+    /* background-color: aqua; */
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10px;
+    margin-top: 10px;
+}
+
+
+.amount {
+    display: flex;
+    flex-direction: row;
+}
+
+.amount p{
+    margin: 2px 5px;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+/* .amount+p{
+    font-weight: bold;
+} */
+
+.itemNumber{
+    border: 1px solid black;
+    padding: 0px 20px 0px 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.form button{
+    background-color: brown;
+    border: none;
+    width:70px;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 3px 2px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
