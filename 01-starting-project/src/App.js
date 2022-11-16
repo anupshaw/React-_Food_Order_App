@@ -1,4 +1,5 @@
 import React from "react";
+import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
 import MealsSummary from "./components/Meals/MealsSummary";
@@ -35,6 +36,7 @@ function App() {
     <div>
       <Header></Header>
       <MealsSummary />
+      <Cart />
       <Meals items={dummyMeals} />
     </div>
   );
