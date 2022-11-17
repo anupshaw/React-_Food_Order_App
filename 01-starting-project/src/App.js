@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
@@ -32,11 +32,22 @@ const dummyMeals = [
 ];
 
 function App() {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+
+const cartOpenHandler=()=>{
+  setIsCartOpen(true);
+}
+
+const cartCloseHandler=()=>{
+  setIsCartOpen(false);
+}
+
   return (
     <div>
-      <Header></Header>
+      <Header onCartOpen={cartOpenHandler}></Header>
       <MealsSummary />
-      <Cart />
+      {isCartOpen && <Cart  onCartClose={cartCloseHandler} />}
       <Meals items={dummyMeals} />
     </div>
   );
