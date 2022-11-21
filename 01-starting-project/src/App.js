@@ -3,53 +3,54 @@ import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
 import MealsSummary from "./components/Meals/MealsSummary";
+import CartProvider from "./components/Store/CartProvider";
 
 const dummyMeals = [
   {
     id: "e1",
     name: "Sushi",
     description: "Finest fish and veggies",
-    price: "$22.99",
+    price: "22.99",
   },
   {
     id: "e2",
     name: "Schnitzel",
     description: "A german speciality!",
-    price: "$16.50",
+    price: "16.50",
   },
   {
     id: "e3",
     name: "Berbecue Burger",
     description: "American,raw,meaty",
-    price: "$12.99",
+    price: "12.99",
   },
   {
     id: "e4",
     name: "Green Bowl",
     description: "Healthy...and green...",
-    price: "$10.75",
+    price: "10.75",
   },
 ];
 
 function App() {
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [cartIsShown, setCartIsShown] = useState(false);
 
 
-const cartOpenHandler=()=>{
-  setIsCartOpen(true);
+const showCartHandler=()=>{
+  setCartIsShown(true);
 }
 
-const cartCloseHandler=()=>{
-  setIsCartOpen(false);
+const hideCartHandler=()=>{
+  setCartIsShown(false);
 }
 
   return (
-    <div>
-      <Header onCartOpen={cartOpenHandler}></Header>
+    <CartProvider>
+      <Header onShowCart={showCartHandler}></Header>
       <MealsSummary />
-      {isCartOpen && <Cart  onCartClose={cartCloseHandler} />}
+      {cartIsShown && <Cart  onCartClose={hideCartHandler} />}
       <Meals items={dummyMeals} />
-    </div>
+    </CartProvider>
   );
 }
 
